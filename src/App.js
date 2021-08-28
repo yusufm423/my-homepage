@@ -7,23 +7,23 @@ function App() {
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">Dining Hall</a>
+          <a className="navbar-brand" href="#">Dining Hall</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarScroll">
             <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">Home</a>
+                <a className="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">Food Time Table</a>
+                <a className="nav-link" href="#">Food Time Table</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">Feedback</a>
+                <a className="nav-link" href="#">Feedback</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">Account</a>
+                <a className="nav-link" href="#">Account</a>
               </li>
              </ul> 
             <form className="d-flex">
@@ -71,22 +71,22 @@ function App() {
 
             {/* <!-- Right --> */}
             <div>
-              <a href="/" className="me-4 text-reset">
+              <a href="#" className="me-4 text-reset">
                 <i className="fab fa-facebook-f"></i>
               </a>
-              <a href="/" className="me-4 text-reset">
+              <a href="#" className="me-4 text-reset">
                 <i className="fab fa-twitter"></i>
               </a>
-              <a href="/" className="me-4 text-reset">
+              <a href="#" className="me-4 text-reset">
                 <i className="fab fa-google"></i>
               </a>
-              <a href="/" className="me-4 text-reset">
+              <a href="#" className="me-4 text-reset">
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="/" className="me-4 text-reset">
+              <a href="#" className="me-4 text-reset">
                 <i className="fab fa-linkedin"></i>
               </a>
-              <a href="/" className="me-4 text-reset">
+              <a href="#" className="me-4 text-reset">
                 <i className="fab fa-github"></i>
               </a>
             </div>
@@ -119,16 +119,16 @@ function App() {
                     Products
                   </h6>
                   <p>
-                    <a href="#!" className="text-reset">Angular</a>
+                    <a href="#" className="text-reset">Angular</a>
                   </p>
                   <p>
-                    <a href="#!" className="text-reset">React</a>
+                    <a href="#" className="text-reset">React</a>
                   </p>
                   <p>
-                    <a href="#!" className="text-reset">Vue</a>
+                    <a href="#" className="text-reset">Vue</a>
                   </p>
                   <p>
-                    <a href="#!" className="text-reset">Laravel</a>
+                    <a href="#" className="text-reset">Laravel</a>
                   </p>
                 </div>
                 {/* <!-- Grid column --> */}
@@ -140,16 +140,16 @@ function App() {
                     Useful links
                   </h6>
                   <p>
-                    <a href="#!" className="text-reset">Pricing</a>
+                    <a href="#" className="text-reset">Pricing</a>
                   </p>
                   <p>
-                    <a href="#!" className="text-reset">Settings</a>
+                    <a href="#" className="text-reset">Settings</a>
                   </p>
                   <p>
-                    <a href="#!" className="text-reset">Orders</a>
+                    <a href="#" className="text-reset">Orders</a>
                   </p>
                   <p>
-                    <a href="#!" className="text-reset">Help</a>
+                    <a href="#" className="text-reset">Help</a>
                   </p>
                 </div>
                 {/* <!-- Grid column --> */}
