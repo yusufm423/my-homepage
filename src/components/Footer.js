@@ -4,13 +4,13 @@ export default function Footer() {
     return (
         <div>
             {/* <!-- Footer --> */}
-        <footer className="text-center text-lg-start bg-light text-muted">
+        <footer className="text-center text-lg-start bg-dark text-muted">
           {/* <!-- Section: Social media --> */}
           <section
             className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
           >
             {/* <!-- Left --> */}
-            <div className="me-5 d-none d-lg-block">
+            <div className="me-5  d-lg-block">
               <span>This website is currently under development. Please co-operate.</span>
             </div>
             {/* <!-- Left --> */}

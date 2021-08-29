@@ -14,13 +14,13 @@ export default function Navbar(props) {
                     <li className="nav-item">
                         <a className="nav-link active" aria-current="page" href="#!">{props.tab1}</a>
                     </li>
-                    <li className="nav-item">
+                    <li className="nav-item mx-1">
                         <a className="nav-link" href="#!">{props.tab2}</a>
                     </li>
-                    <li className="nav-item">
+                    <li className="nav-item mx-1">
                         <a className="nav-link" href="#!">{props.tab3}</a>
                     </li>
-                    <li className="nav-item">
+                    <li className="nav-item mx-1">
                         <a className="nav-link" href="#!">{props.tab4}</a>
                     </li>
                     </ul> 
