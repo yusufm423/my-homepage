@@ -3,12 +3,12 @@ import React from 'react'
 export default function Notices() {
     return (
         <>
-        <div className="card mb-3" style={{borderRadius:"15px"}} >
+        <div className="card mb-3" style={{borderRadius:"15px", opacity:1}} >
         <div className="card-header bg-transparent"><h5>Notices and Updates</h5></div>
         <div className="card-body">
-            <h5 className="card-title">Success card title</h5>
+        <ul>
             <p className="card-text">
-            <ul>
+            
                         <li>Some text</li>
                         <li>Some text</li>
                         <li>Some text</li>
@@ -31,8 +31,8 @@ export default function Notices() {
                         <li>Some text</li>
                         <li>Some text</li>
                         <li>Some text</li>
-                    </ul>
             </p>
+            </ul>
         </div>
         </div>
         

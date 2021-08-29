@@ -11,16 +11,15 @@ function App() {
     <>
       <Navbar title="Dining Hall" tab1="Home" tab2="Food Time Table" tab3="Feedback" tab4="Account"/>
 
-      
-      {/* <AboutUs/> */}
-      <div className="container">
+      <div className="container-fluid" style={{marginTop:70}}>
         <div className="row">
-          <div className="col-2 my-3 mb-3"><Notices/></div>
-          <div className="col-8 my-3 mb-3"><HomeMid/> </div>
+          <div className="col-3 my-3 mb-3"><Notices/></div>
+          <div className="col-7 my-3 mb-3"><HomeMid/> </div>
           <div className="col-2 my-3 mb-3"><Menu/></div> 
         </div>
       </div>
-      <Footer></Footer>
+      
+      <Footer/>
     </>
   );
 }

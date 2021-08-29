@@ -6,37 +6,11 @@ export default function Footer() {
             {/* <!-- Footer --> */}
         <footer className="text-center text-lg-start bg-dark text-muted">
           {/* <!-- Section: Social media --> */}
-          <section
-            className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
-          >
+          <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom" >
             {/* <!-- Left --> */}
             <div className="me-5  d-lg-block">
               <span>This website is currently under development. Please co-operate.</span>
             </div>
-            {/* <!-- Left --> */}
-
-            {/* <!-- Right --> */}
-            {/* <div>
-              <a href="#!" className="me-4 text-reset">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="#!" className="me-4 text-reset">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a href="#!" className="me-4 text-reset">
-                <i className="fab fa-google"></i>
-              </a>
-              <a href="#!" className="me-4 text-reset">
-                <i className="fab fa-instagram"></i>
-              </a>
-              <a href="#!" className="me-4 text-reset">
-                <i className="fab fa-linkedin"></i>
-              </a>
-              <a href="#!" className="me-4 text-reset">
-                <i className="fab fa-github"></i>
-              </a>
-            </div> */}
-            {/* <!-- Right --> */}
           </section>
           {/* <!-- Section: Social media --> */}
 

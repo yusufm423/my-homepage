@@ -5,10 +5,12 @@ import AboutUs from './AboutUs';
 export default function HomeMid() {
     return (
         <>
-            <div className="card mb-3" style={{borderRadius:"15px"}}>
-                <img src={image} className="conatiner img-fluid card-img-top" alt="Nadeem Tarin Hall"/>
+            <div className="mb-3">
+                <img src={image} className="conatiner img-fluid card-img-top rounded" alt="Nadeem Tarin Hall"/>
+            </div>
+            <div className="card mb-3" style={{borderRadius:"15px",opacity:1}}>
                     <div className="card-body">
-                        <p className="card-text"><div className=" mb-3"><AboutUs/></div></p>
+                        <div className=" mb-3"><AboutUs/></div>
                     </div>
             </div>
         </>
