@@ -2,24 +2,38 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import HomeMid from './components/HomeMid';
-import Notices from './components/Notices';
-import Menu from './components/Menu';
+import Home from './components/Home';
+import Feedback from './components/Feedback';
+import LogIn from './components/LogIn';
+import SignUp from './components/SignUp';
+import {
+  HashRouter,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 function App() {
   return (
-    <>
+    <><HashRouter>
       <Navbar title="Dining Hall" tab1="Home" tab2="Food Time Table" tab3="Feedback" tab4="Account"/>
 
       <div className="container-fluid" style={{marginTop:70}}>
-        <div className="row">
-          <div className="col-3 my-3 mb-3"><Notices/></div>
-          <div className="col-7 my-3 mb-3"><HomeMid/> </div>
-          <div className="col-2 my-3 mb-3"><Menu/></div> 
-        </div>
+          <Switch>
+          <Route path="/login">
+            <LogIn/>
+          </Route>
+          <Route path="/signup">
+            <SignUp/>
+          </Route>
+          <Route path="/">
+            <Home/>
+          </Route>
+        </Switch>
       </div>
+      <Feedback></Feedback>
       
       <Footer/>
+      </HashRouter>
     </>
   );
 }

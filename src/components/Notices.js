@@ -3,36 +3,30 @@ import React from 'react'
 export default function Notices() {
     return (
         <>
-        <div className="card mb-3" style={{borderRadius:"15px", opacity:1}} >
+        <div className="card mb-3" style={{borderRadius:"15px",backgroundColor:"rgb(255,255,255,0.5)"}} >
         <div className="card-header bg-transparent"><h5>Notices and Updates</h5></div>
         <div className="card-body">
-        <ul>
-            <p className="card-text">
+            <div className="list-group">
+
+            <p className="card-text " style={{backgroundColor:"rgb(255,255,255,0.5)"}}>
+                <button type="button" className="list-group-item border-0 list-group-item-action">Some text</button>
+                <button type="button" className="list-group-item border-0 list-group-item-action">Some text</button>
+                <button type="button" className="list-group-item border-0 list-group-item-action">Some text</button>
+                <button type="button" className="list-group-item border-0 list-group-item-action">Some text</button>
+                <button type="button" className="list-group-item border-0 list-group-item-action">Some text</button>
+                <button type="button" className="list-group-item border-0 list-group-item-action">Some text</button>
+                <button type="button" className="list-group-item border-0 list-group-item-action">Some text</button>
+                <button type="button" className="list-group-item border-0 list-group-item-action">Some text</button>
+                <button type="button" className="list-group-item border-0 list-group-item-action">Some text</button>
+                <button type="button" className="list-group-item border-0 list-group-item-action">Some text</button>
+                <button type="button" className="list-group-item border-0 list-group-item-action">Some text</button>
+                <button type="button" className="list-group-item border-0 list-group-item-action">Some text</button>
+                <button type="button" className="list-group-item border-0 list-group-item-action">Some text</button>
+                <button type="button" className="list-group-item border-0 list-group-item-action">Some text</button>
+                <button type="button" className="list-group-item border-0 list-group-item-action">Some text</button>
             
-                        <li>Some text</li>
-                        <li>Some text</li>
-                        <li>Some text</li>
-                        <li>Some text</li>
-                        <li>Some text</li>
-                        <li>Some text</li>
-                        <li>Some text</li>
-                        <li>Some text</li>
-                        <li>Some text</li>
-                        <li>Some text</li>
-                        <li>Some text</li>
-                        <li>Some text</li>
-                        <li>Some text</li>
-                        <li>Some text</li>
-                        <li>Some text</li>
-                        <li>Some text</li>
-                        <li>Some text</li>
-                        <li>Some text</li>
-                        <li>Some text</li>
-                        <li>Some text</li>
-                        <li>Some text</li>
-                        <li>Some text</li>
             </p>
-            </ul>
+            </div>
         </div>
         </div>
         

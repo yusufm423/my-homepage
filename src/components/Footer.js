@@ -4,7 +4,7 @@ export default function Footer() {
     return (
         <div>
             {/* <!-- Footer --> */}
-        <footer className="text-center text-lg-start bg-dark text-muted">
+        <footer className="page-footer text-center text-lg-start bg-dark text-muted" style={{width:"100%",bottom:"0",position:"relative"}}>
           {/* <!-- Section: Social media --> */}
           <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom" >
             {/* <!-- Left --> */}
@@ -77,31 +77,20 @@ export default function Footer() {
                 <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                   {/* <!-- Links --> */}
                   <h6 className="text-uppercase fw-bold mb-4">
-                    Contact
+                  Contact
                   </h6>
-                  <p><i className="fas fa-home me-3"></i>ZHCET,AMU Aligarh</p>
+                  <p><i className="text-reset"></i>ZHCET,AMU Aligarh</p>
                   <p>
-                    <i className="fas fa-envelope me-3"></i>
+                    <i className="text-reset"></i>
                     hello@example.com
                   </p>
-                  <p><i className="fas fa-phone me-3"></i> +91 9999 99999</p>
-                  <p><i className="fas fa-print me-3"></i> +91 9999 99999</p>
+                  <p><i className="text-reset"></i> +91 9999 99999</p>
+                  <p><i className="text-reset"></i> +91 9999 99999</p>
                 </div>
-                {/* <!-- Grid column --> */}
               </div>
-              {/* <!-- Grid row --> */}
             </div>
           </section>
-          {/* <!-- Section: Links  --> */}
-
-          {/* <!-- Copyright --> */}
-          {/* <div className="text-center p-4" >
-            © 2021 Copyright : 
-            <a className="text-reset fw-bold" href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-          </div> */}
-          {/* <!-- Copyright --> */}
         </footer>
-        {/* <!-- Footer --> */}
         </div>
     )
 }
