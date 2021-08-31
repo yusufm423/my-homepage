@@ -15,7 +15,7 @@ import {
 function App() {
   return (
     <><HashRouter>
-      <Navbar title="Dining Hall" tab1="Home" tab2="Food Time Table" tab3="Feedback" tab4="Account"/>
+      <Navbar title="NT - Dining Hall" tab1="Home" tab2="Time Table" tab3="Feedback" tab4="Account"/>
 
       <div className="container-fluid" style={{marginTop:70}}>
           <Switch>

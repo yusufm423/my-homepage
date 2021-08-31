@@ -1,4 +1,5 @@
 import React from 'react'
+import image from './amulogo.jpg'
 import { Link } from 'react-router-dom'
 
 export default function Navbar(props) {
@@ -6,6 +7,7 @@ export default function Navbar(props) {
         <div>
             <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid">
+                <img src={image} className="mx-2" alt="AMU logo" />
                 <Link className="navbar-brand" to="/">{props.title}</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
