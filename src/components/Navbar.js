@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 export default function Navbar(props) {
     return (
         <div>
-            <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <nav className="navbar fixed-top navbar-expand-lg navbar-dark " style={{backgroundColor:"rgb(40,40,40)"}}>
                 <div className="container-fluid">
                 <img src={image} className="mx-2" alt="AMU logo" />
                 <Link className="navbar-brand" to="/">{props.title}</Link>
