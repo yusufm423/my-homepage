@@ -18,7 +18,7 @@ export default function Navbar(props) {
                         <Link className="nav-link active" aria-current="page" to="/">{props.tab1}</Link>
                     </li>
                     <li className="nav-item mx-1">
-                        <a className="nav-link" href="#!">{props.tab2}</a>
+                        <Link className="nav-link" to="/ttable">{props.tab2}</Link>
                     </li>
                     <li className="nav-item mx-1">
                     <Link className="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal" to="#!">{props.tab3}</Link>

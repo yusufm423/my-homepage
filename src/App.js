@@ -10,6 +10,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import TimeTable from './components/TimeTable';
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path="/signup">
             <SignUp/>
+          </Route>
+          <Route path="/ttable">
+            <TimeTable/>
           </Route>
           <Route path="/">
             <Home/>
