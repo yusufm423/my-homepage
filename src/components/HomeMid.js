@@ -1,6 +1,7 @@
 import React from 'react'
 import image from './NT.jpeg';
 import AboutUs from './AboutUs';
+import { Typography } from '@material-ui/core';
 
 export default function HomeMid() {
     return (
@@ -10,7 +11,7 @@ export default function HomeMid() {
             </div>
             <div className="card mb-3" style={{borderRadius:"15px",backgroundColor:"rgb(255,255,255,0.5)"}}>
                     <div className="card-body">
-                    <div className="card-header bg-transparent"><h5>About Us</h5></div>
+                    <Typography variant="h4">About us</Typography>
                         <div className=" mb-3"><AboutUs/></div>
                     </div>
             </div>

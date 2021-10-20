@@ -1,9 +1,10 @@
 import React from 'react'
+import { Typography } from '@material-ui/core'
 
 export default function AboutUs() {
     return (
         <>
-           <p>
+           <Typography variant="h6" component="p" paragraph>
                 A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text 
                 A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text 
                 A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text 
@@ -15,8 +16,8 @@ export default function AboutUs() {
                 A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text 
                 A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text 
                 A lot of text  A lot of text  A lot of text  A lot of text  
-            </p>
-            <p>
+            </Typography>
+            <Typography variant="h6" component="p" paragraph>
                 A lot of text  A lot of text  A lot of text  A lot of text  A lot of text 
                 A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text
                 A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text 
@@ -27,7 +28,7 @@ export default function AboutUs() {
                 A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text 
                 A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text 
                 A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text  A lot of text 
-            </p>
+            </Typography>
                 {/* <label for="exampleFormControlTextarea1" className="form-label">Example textarea</label>
                 <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> */}
       
