@@ -5,13 +5,17 @@ import Home from './components/Home';
 import Feedback from './components/Feedback';
 import LogIn from './components/LogIn';
 import SignUp from './components/SignUp';
+import Account from './components/Account_page'
 import {
   HashRouter,
   Switch,
   Route,
 } from "react-router-dom";
 import TimeTable from './components/TimeTable';
-
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+/>
 function App() {
   return (
     <><HashRouter>
@@ -27,6 +31,10 @@ function App() {
           </Route>
           <Route path="/ttable">
             <TimeTable/>
+          </Route>
+          
+          <Route path="/account">
+            <Account/>
           </Route>
           <Route path="/">
             <Home/>

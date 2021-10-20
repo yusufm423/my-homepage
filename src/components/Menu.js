@@ -1,4 +1,6 @@
 import React from 'react'
+import { Typography } from '@material-ui/core'
+import { ListItem,List } from '@material-ui/core'
 
 export default function Menu() {
     return (
@@ -9,18 +11,13 @@ export default function Menu() {
         <div className="card-body">
         <div className="list-group">
 
-            <p className="card-text " style={{backgroundColor:"rgb(255,255,255,0.5)"}}>
-                <button type="button" className="list-group-item border-0 list-group-item-action">Some text</button>
-                <button type="button" className="list-group-item border-0 list-group-item-action">Some text</button>
-                <button type="button" className="list-group-item border-0 list-group-item-action">Some text</button>
-                <button type="button" className="list-group-item border-0 list-group-item-action">Some text</button>
-                <button type="button" className="list-group-item border-0 list-group-item-action">Some text</button>
-                <button type="button" className="list-group-item border-0 list-group-item-action">Some text</button>
-                <button type="button" className="list-group-item border-0 list-group-item-action">Some text</button>
-                <button type="button" className="list-group-item border-0 list-group-item-action">Some text</button>
-                <button type="button" className="list-group-item border-0 list-group-item-action">Some text</button>
-            
-            </p>
+        <List >
+           <Typography variant="h6"> 
+                        <ListItem button>Breakfast</ListItem>
+                        <ListItem button>Lunch</ListItem>
+                        <ListItem button>Dinner</ListItem>
+            </Typography>
+            </List>
             </div>
         </div>
         </div>
