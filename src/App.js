@@ -6,12 +6,14 @@ import Feedback from './components/Feedback';
 import LogIn from './components/LogIn';
 import SignUp from './components/SignUp';
 import Account from './components/Account_page'
+// import AdminPage from './components/AdminPage';
 import {
   HashRouter,
   Switch,
   Route,
 } from "react-router-dom";
 import TimeTable from './components/TimeTable';
+import AdminPage from './components/AdminPage';
 <link
   rel="stylesheet"
   href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -31,6 +33,9 @@ function App() {
           </Route>
           <Route path="/ttable">
             <TimeTable/>
+          </Route>
+          <Route path="/admin">
+            <AdminPage/>
           </Route>
           
           <Route path="/account">
