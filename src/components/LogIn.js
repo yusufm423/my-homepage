@@ -25,7 +25,7 @@ export default function LogIn() {
                         <option value="1">Student</option>
                         <option value="2">Admin</option>
                     </select>
-                    <label htmlFor="floatingSelectGrid">Type of Access</label>
+                    <label htmlFor="floatingSelectGrid">Access as</label>
                     </div>       
                         <div className="my-2 d-grid gap-2 d-md-flex justify-content-md-end"> 
                         <Link className="my-2 mx-3" to="/admin">Temp Link for Admin</Link>  

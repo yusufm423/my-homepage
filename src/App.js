@@ -6,6 +6,8 @@ import Feedback from './components/Feedback';
 import LogIn from './components/LogIn';
 import SignUp from './components/SignUp';
 import Account from './components/Account_page'
+import Stop from './components/Stop'
+import RoomService from './components/RoomService'
 // import AdminPage from './components/AdminPage';
 import {
   HashRouter,
@@ -37,6 +39,12 @@ function App() {
           <Route path="/admin">
             <AdminPage/>
           </Route>
+          <Route path="/stop">
+            <Stop/>
+          </Route>
+          <Route path="/roomorder">
+            <RoomService/>
+          </Route>
           
           <Route path="/account">
             <Account/>
@@ -47,7 +55,8 @@ function App() {
         </Switch>
       </div>
       <Feedback></Feedback>
-      
+      {/* <Stop></Stop> */}
+
       <Footer/>
       </HashRouter>
     </>

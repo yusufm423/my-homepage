@@ -6,7 +6,7 @@ import { ListItem,List } from '@material-ui/core'
 
 export default function Notices(id) {
     id=id.id
-    console.log(id)
+    // console.log(id)
     return (
         <>
         
