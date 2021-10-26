@@ -6,7 +6,7 @@ export default function SignUp() {
             <div className="row-50 d-flex justify-content-center" >
         <div className="col-md-5" style={{marginTop:30}}> <div className="mx-auto"> 
             <div className="card mb-3" style={{borderRadius:"15px",backgroundColor:"rgb(255,255,255,0.5)"}}>
-                    <div className="card-body">
+                    <div className="card-body"><h3>SignUp</h3>
                     <div className=" mb-3 row">
                         <label htmlFor="staticEmail" className=" col-form-label">Name</label>
                         <div className="mx-1">
