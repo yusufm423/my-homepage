@@ -11,7 +11,7 @@ import AccountBalanceWalletIcon from '@material-ui/icons/AccountBalanceWallet';
 import RoomServiceIcon from '@material-ui/icons/RoomService';
 import ToggleOnIcon from '@material-ui/icons/ToggleOn';
 import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
-export default function Account_page() {
+export default function AccountPage() {
     return (
         <>
            
