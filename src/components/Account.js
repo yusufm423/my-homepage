@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 
 import { Avatar } from '@material-ui/core';
 import Image from'./NT.jpeg'
@@ -43,10 +43,10 @@ export default function AccountPage() {
                         <MenuList>
                                 <MenuItem><AccountBalanceWalletIcon style={{marginRight:"2vw"}}/><Typography variant="h6">Account</Typography></MenuItem>
                                 <MenuItem><PaymentIcon style={{marginRight:"2vw"}}/><Typography variant="h6">Payment</Typography></MenuItem>
-                                <MenuItem><RoomServiceIcon style={{marginRight:"2vw"}}/><Typography variant="h6">Room Service</Typography></MenuItem>
-                                <MenuItem><ToggleOnIcon style={{marginRight:"2vw"}}/><Typography variant="h6">Close/Open Dining Account</Typography></MenuItem>
+                                <MenuItem><RoomServiceIcon style={{marginRight:"2vw"}}/><Typography variant="h6"><Link to="/roomorder">Room Service</Link></Typography></MenuItem>
+                                <MenuItem><ToggleOnIcon style={{marginRight:"2vw"}}/><Typography variant="h6"><Link to="/stop">Close/Open Dining Account</Link></Typography></MenuItem>
                             </MenuList>
-
+                            {/* <Stop></Stop> */}
                     </div>
                         
             </div>

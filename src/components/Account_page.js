@@ -1,6 +1,4 @@
 import React from 'react'
-
-
 import Accountpage from './Account'
 
 import Notices from './Notices';

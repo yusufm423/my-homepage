@@ -21,7 +21,7 @@ export default function Navbar(props) {
                         <Link className="nav-link" to="/ttable">{props.tab2}</Link>
                     </li>
                     <li className="nav-item mx-1">
-                    <Link className="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal" to="/account">{props.tab3}</Link>
+                    <Link className="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal" to="\account">{props.tab3}</Link>
                     </li>
                     <li className="nav-item mx-1">
                     <Link className="nav-link" to="/account">{props.tab4}</Link>
