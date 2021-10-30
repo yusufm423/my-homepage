@@ -20,13 +20,7 @@ export default function SignUp() {
                         </div>
                     </div>
                     <div className=" mb-3 row">
-                        <label htmlFor="staticEmail" className=" col-form-label">Faculty No.</label>
-                        <div className="mx-1">
-                        <input type="text" className="form-control" id="inputEmail" />
-                        </div>
-                    </div>
-                    <div className=" mb-3 row">
-                        <label htmlFor="staticEmail" className=" col-form-label">Hostel</label>
+                        <label htmlFor="staticEmail" className=" col-form-label">Email</label>
                         <div className="mx-1">
                         <input type="text" className="form-control" id="inputEmail" />
                         </div>
