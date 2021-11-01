@@ -1,0 +1,64 @@
+Student{
+name:
+email:
+password:{
+Room no.
+payment history:
+Dining Status:
+Enrollment no.:
+phone no.:
+faculty no.
+hostel name:
+course name:
+year no.:
+profile pic:
+}
+
+Administrator{
+name:
+position:
+contact no.:
+email:
+password:
+profile pic:
+}
+
+Time Table:{
+Days:{
+	type:Array,
+	name:string,
+	breakfast:array,
+	lunch:array,
+	dinner:array,
+	}
+}
+
+Notices:{
+	heading:
+	file:String,
+}
+
+Feedback:
+{
+name:
+email:
+room no.:
+feedback:
+}
+
+Request_Close:{
+Name:
+Enrol no.:
+Room no.:
+reason:
+email:
+}
+
+Room_service:{
+Name:
+Enrol no.:
+Room no.:
+reason:
+email:
+meal:
+}
