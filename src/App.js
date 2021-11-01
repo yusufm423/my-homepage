@@ -16,49 +16,51 @@ import {
 } from "react-router-dom";
 import TimeTable from './components/TimeTable';
 import AdminPage from './components/AdminPage';
+
 <link
   rel="stylesheet"
   href="https://fonts.googleapis.com/icon?family=Material+Icons"
 />
 function App() {
+ 
   return (
     <><HashRouter>
-      <Navbar title="NT - Dining Hall" tab1="Home" tab2="Time Table" tab3="Feedback" tab4="Account"/>
+      <Navbar title="NT - Dining Hall" tab1="Home" tab2="Time Table" tab3="Feedback" tab4="Account" />
 
-      <div className="container-fluid" style={{marginTop:70}}>
-          <Switch>
+      <div className="container-fluid" style={{ marginTop: 70 }}>
+        <Switch>
           <Route path="/login">
-            <LogIn/>
+            <LogIn />
           </Route>
           <Route path="/signup">
-            <SignUp/>
+            <SignUp />
           </Route>
           <Route path="/ttable">
-            <TimeTable/>
+            <TimeTable />
           </Route>
           <Route path="/admin">
-            <AdminPage/>
+            <AdminPage />
           </Route>
           <Route path="/stop">
-            <Stop/>
+            <Stop />
           </Route>
           <Route path="/roomorder">
-            <RoomService/>
+            <RoomService />
           </Route>
-          
+
           <Route path="/account">
-            <Account/>
+            <Account />
           </Route>
           <Route path="/">
-            <Home/>
+            <Home />
           </Route>
         </Switch>
       </div>
       <Feedback></Feedback>
       {/* <Stop></Stop> */}
 
-      <Footer/>
-      </HashRouter>
+      <Footer />
+    </HashRouter>
     </>
   );
 }

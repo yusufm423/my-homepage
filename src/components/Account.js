@@ -43,8 +43,8 @@ export default function AccountPage() {
                         <MenuList>
                                 <MenuItem><AccountBalanceWalletIcon style={{marginRight:"2vw"}}/><Typography variant="h6">Account</Typography></MenuItem>
                                 <MenuItem><PaymentIcon style={{marginRight:"2vw"}}/><Typography variant="h6">Payment</Typography></MenuItem>
-                                <MenuItem><RoomServiceIcon style={{marginRight:"2vw"}}/><Typography variant="h6"><Link to="/roomorder">Room Service</Link></Typography></MenuItem>
-                                <MenuItem><ToggleOnIcon style={{marginRight:"2vw"}}/><Typography variant="h6"><Link to="/stop">Close/Open Dining Account</Link></Typography></MenuItem>
+                                <MenuItem><RoomServiceIcon style={{marginRight:"2vw"}}/><Typography variant="h6"><Link to="/roomorder" style={{textDecoration:"none",color:"black"}}>Room Service</Link></Typography></MenuItem>
+                                <MenuItem><ToggleOnIcon style={{marginRight:"2vw"}}/><Typography variant="h6"><Link to="/stop" style={{textDecoration:"none",color:"black"}}>Close/Open Dining Account</Link></Typography></MenuItem>
                             </MenuList>
                             {/* <Stop></Stop> */}
                     </div>
