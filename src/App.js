@@ -18,6 +18,7 @@ import {
 } from "react-router-dom";
 import TimeTable from './components/TimeTable';
 import AdminPage from './components/AdminPage';
+import StudentState from './Reducers/StudentState';
 
 <link
   rel="stylesheet"
@@ -36,35 +37,37 @@ function App() {
   }
  
   return (
-    <><HashRouter>
+    <>
+    <StudentState>
+    <HashRouter>
       <Navbar title="NT - Dining Hall" tab1="Home" tab2="Time Table" tab3="Feedback" tab4="Account" />
       <div style={{height: '50px'}}></div>
     <Alert alert={alert}/>
       <div className="container-fluid" >
         <Switch>
-          <Route path="/login">
+          <Route exact path="/login">
             <LogIn showAlert={showAlert}/>
           </Route>
-          <Route path="/signup">
+          <Route exact path="/signup">
             <SignUp showAlert={showAlert}/>
           </Route>
-          <Route path="/ttable">
+          <Route exact path="/ttable">
             <TimeTable />
           </Route>
-          <Route path="/admin">
+          <Route exact path="/admin">
             <AdminPage />
           </Route>
-          <Route path="/stop">
+          <Route exact path="/stop">
             <Stop />
           </Route>
-          <Route path="/roomorder">
+          <Route exact path="/roomorder">
             <RoomService />
           </Route>
 
-          <Route path="/account">
+          <Route exact path="/account">
             <Account />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
           </Route>
         </Switch>
@@ -74,6 +77,7 @@ function App() {
 
       <Footer />
     </HashRouter>
+     exact</StudentState>
     </>
   );
 }

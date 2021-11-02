@@ -31,7 +31,7 @@ export default function Navbar(props) {
                     <Link className="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal" to="!#">{props.tab3}</Link>
                     </li>
                     <li className="nav-item mx-1">
-                    <Link className={`nav-link ${location.pathname==="/account"?"active":""} `} to="/account">{props.tab4}</Link>
+                    <Link className={`nav-link ${location.pathname==="/account"?"active":""} `} to="/account" replace>{props.tab4}</Link>
                     </li>
                     </ul> 
                     {!localStorage.getItem('token') ? <form className="d-flex">
