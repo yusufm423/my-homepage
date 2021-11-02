@@ -9,6 +9,8 @@ import Account from './components/Account_page'
 import Stop from './components/Stop'
 import RoomService from './components/RoomService'
 // import AdminPage from './components/AdminPage';
+import Alert from "./components/Alert";
+import { useState } from "react";
 import {
   HashRouter,
   Switch,
@@ -22,18 +24,29 @@ import AdminPage from './components/AdminPage';
   href="https://fonts.googleapis.com/icon?family=Material+Icons"
 />
 function App() {
+  const [alert, setAlert] = useState(null)
+  const showAlert=(message,type)=>{
+    setAlert({
+      msg: message,
+      type: type
+    })
+    setTimeout(() => {
+      setAlert(null);
+    }, 1500);
+  }
  
   return (
     <><HashRouter>
       <Navbar title="NT - Dining Hall" tab1="Home" tab2="Time Table" tab3="Feedback" tab4="Account" />
-
-      <div className="container-fluid" style={{ marginTop: 70 }}>
+      <div style={{height: '50px'}}></div>
+    <Alert alert={alert}/>
+      <div className="container-fluid" >
         <Switch>
           <Route path="/login">
-            <LogIn />
+            <LogIn showAlert={showAlert}/>
           </Route>
           <Route path="/signup">
-            <SignUp />
+            <SignUp showAlert={showAlert}/>
           </Route>
           <Route path="/ttable">
             <TimeTable />

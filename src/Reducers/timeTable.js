@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 export default (TimeTable={},action)=>{
     switch(action.type){
         case 'getTimetable' :
