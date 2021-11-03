@@ -21,7 +21,7 @@ export default function TimeTable() {
 
     if (!store)
         return <CircularProgress />
-    console.log(Data,store)
+    // console.log(Data,store)
     return (
         <>
             <div className="row">
@@ -52,9 +52,9 @@ export default function TimeTable() {
                             <div className="list-group mb-3">
                                 {
                                 (store)?store?.map(day =>
-                                    <div>
+                                    <div key={day.count} >
                                         <h6 className="my-2">{day.name}</h6>
-                                        <p className="mx-4">
+                                        <div className="mx-4">
                                             <Typography variant="body1">Breakfast: {day.breakfast}</Typography>
                                             <Collapse in={edit}>
                                                 <TextField variant="filled" multiline maxRows={4} label="Breakfast" style={{
@@ -97,7 +97,7 @@ export default function TimeTable() {
                                                 }}
                                                 />
                                             </Collapse>
-                                        </p>
+                                        </div>
                                     </div>
                                 ):<></>}
 

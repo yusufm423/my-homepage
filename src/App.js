@@ -77,7 +77,7 @@ function App() {
 
       <Footer />
     </HashRouter>
-     exact</StudentState>
+     </StudentState>
     </>
   );
 }
