@@ -2,24 +2,37 @@ import React, {useState} from 'react'
 import { Link, useHistory } from 'react-router-dom'
 
 export default function LogIn(props) {
-    const [credentials, setCredentials] = useState({email:"", password:""})
+    const [credentials, setCredentials] = useState({email:"", password:"",access:""})
     let history = useHistory()
 
     const handleSubmit =async (e)=>{
         e.preventDefault()
-        const response = await fetch("http://localhost:5000/api/auth/loginstudent", {
+        let user = ""
+        if(credentials.access==="1"){
+             user = "student"
+        }else{
+             user = "admin"
+        }
+        const response = await fetch(`http://localhost:5000/api/auth/login${user}`, {
             method: 'POST', 
             headers: {
               'Content-Type': 'application/json',
             },
             body: JSON.stringify({email: credentials.email,password: credentials.password}) 
           });
+        //   console.log(user)
           const json = await response.json()
           console.log(json)
           if(json.success){
             //save the auth token
             localStorage.setItem('token', json.authToken)
-            history.push("./")
+            if(user === "student"){
+                localStorage.setItem('isadmin', false)
+                history.push("/account")
+            }else{
+                localStorage.setItem('isadmin', true)
+                history.push("/admin")
+            }
             props.showAlert("Logged In Successfully", "success")
             // console.log("Logged In Successfully")
 
@@ -54,7 +67,8 @@ export default function LogIn(props) {
                         </div>
                     </div>  
                     <div className="mb-3 row form-floating mx-1">
-                    <select className="form-select my-2" id="access" name="access" aria-label="Floating label select example">
+                    <select className="form-select my-2" id="access" value={credentials.access} onChange={onChange} name="access" aria-label="Floating label select example">
+                        <option value="0">Select Access type</option>
                         <option value="1">Student</option>
                         <option value="2">Admin</option>
                     </select>
