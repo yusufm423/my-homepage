@@ -9,9 +9,8 @@ export default function Account() {
         <>
            <div className="row">
             <div className="col-3 my-3 mb-3"><Notices/></div>
-
             <div className="col-7 my-3 mb-3"><Accountpage/> </div>
-            <div className="col-2 my-3 mb-3"><Menu/></div> 
+            <div className="col-2 my-3 mb-3"><Menu/></div>
           </div>  
         </>
     )

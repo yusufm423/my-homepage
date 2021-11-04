@@ -28,10 +28,11 @@ export default function LogIn(props) {
             localStorage.setItem('token', json.authToken)
             if(user === "student"){
                 localStorage.setItem('isadmin', false)
-                history.push("/account")
-            }else{
+                history.push('./account')
+            }else if(user === "admin"){
                 localStorage.setItem('isadmin', true)
-                history.push("/admin")
+                history.push('./admin')
+
             }
             props.showAlert("Logged In Successfully", "success")
             // console.log("Logged In Successfully")
@@ -75,7 +76,7 @@ export default function LogIn(props) {
                     <label htmlFor="floatingSelectGrid">Access as</label>
                     </div>       
                         <div className="my-2 d-grid gap-2 d-md-flex justify-content-md-end"> 
-                        <Link className="my-2 mx-3" to="/admin">Temp Link for Admin</Link>  
+                        {/* <Link className="my-2 mx-3" to="/admin">Temp Link for Admin</Link>   */}
                         <Link className="my-2 mx-3" to="#!">Forgot Password?</Link>     
                         <button type="submit" className="btn btn-warning">LogIn</button>
                         <Link to='/signup'><button type="button" className="btn btn-warning">SignUp</button></Link>

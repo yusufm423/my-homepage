@@ -1,4 +1,6 @@
-import{ React , useState}from 'react'
+import{ React , useState,useEffect, useContext}from 'react'
+import adminContext from '../Reducers/adminContext';
+import { useHistory } from "react-router";
 import Notices from './Notices';
 import Collapse from '@material-ui/core/Collapse';
 import { Avatar } from '@material-ui/core';
@@ -13,6 +15,27 @@ import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
 export default function AdminPage() {
     const [showReq,changeReq] = useState(false)
     const [showDel,changeDel] = useState(false)
+    let history = useHistory()
+    
+    if(localStorage.getItem('isadmin')==="false"){
+        history.push('/')
+    }
+
+    const context = useContext(adminContext);
+//   const { deleteNote } = context;
+  const { admin, getDetailsAdmin } = context;
+
+    useEffect(() => {
+               
+        if(localStorage.getItem('token')){
+          getDetailsAdmin();
+        }else{
+          history.push("/login")
+        }
+         // eslint-disable-next-line
+}, [])
+
+
     return (
         <>
             <div className="row">
@@ -22,12 +45,12 @@ export default function AdminPage() {
                         <div className="card-body" style={{ display: "inline-flex", }}>
                             <Avatar src={Image} style={{ height: "15vw", width: "15vw", marginRight: "2vw" }} />
                             <div>
-                                <Typography variant="h4">Administrator</Typography>
-                                <Typography variant="h6">Nadeem Tarin Dining Hall</Typography>
-                                <Typography variant="subtitle1"> Room no.25 (Ground Floor)</Typography>
+                                <Typography variant="h4">{admin.name}</Typography>
+                                <Typography variant="h6">{admin.position}</Typography>
+                                <Typography variant="subtitle1"> Room number {admin.room_no}</Typography>
                                 <div style={{ display: "inline-flex", margin: "2px" }}>
                                     <ContactPhoneIcon style={{ marginRight: "1vw" }} />
-                                    <Typography variant="body1">9238717816</Typography>
+                                    <Typography variant="body1">{admin.phone_no}</Typography>
                                 </div>
                                 <div>
                                     <Button variant="outlined" color="primary" style={{ marginTop: "2vh" }}>Edit Profile</Button>

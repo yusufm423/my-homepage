@@ -17,14 +17,18 @@ export default function AccountPage(props) {
 
   const context = useContext(studentContext);
 //   const { deleteNote } = context;
-  const { student, getDetails } = context;
+  const { student, getDetailsStudent } = context;
 
     let history = useHistory()
+    
+         if(localStorage.getItem('isadmin')==="true"){
+           history.push("/")
+         }
 
     useEffect(() => {
          
-        if(localStorage.getItem('token')){
-          getDetails();
+        if(localStorage.getItem('token') ){
+          getDetailsStudent();
         }else{
           history.push("/login")
         }

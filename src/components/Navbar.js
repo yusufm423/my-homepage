@@ -3,6 +3,7 @@ import image from './amulogo.jpg'
 import { Link, useLocation, useHistory } from 'react-router-dom'
 
 export default function Navbar(props) {
+    // let isadmin = !localStorage.getItem('isadmin')
     let history = useHistory();
     const handleLogout=()=>{
         localStorage.removeItem('token');
@@ -39,7 +40,8 @@ export default function Navbar(props) {
                     <Link className="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal" to="!#">{props.tab3}</Link>
                     </li>
                     <li className="nav-item mx-1">
-                    <Link className={`nav-link ${location.pathname==="/account"?"active":""} `} onClick={handleClick} to={localStorage.getItem('isadmin')? "/admin":"/account"} replace>{props.tab4}</Link>
+                    {localStorage.getItem('isadmin')!=="true" ? <Link className={`nav-link ${location.pathname==="/account"?"active":""} `} onClick={handleClick} to="/account" >{props.tab4}</Link>: <Link className={`nav-link ${location.pathname==="/admin"?"active":""} `} onClick={handleClick} to="/admin" >{props.tab4}</Link> }
+                    {/* <Link className={`nav-link ${location.pathname==="/account"?"active":""} `} onClick={handleClick} to="/account" >{props.tab4}</Link> */}
                     </li>
                     </ul> 
                     {!localStorage.getItem('token') ? <form className="d-flex">

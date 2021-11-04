@@ -8,7 +8,6 @@ import SignUp from './components/SignUp';
 import Account from './components/Account_page'
 import Stop from './components/Stop'
 import RoomService from './components/RoomService'
-// import AdminPage from './components/AdminPage';
 import Alert from "./components/Alert";
 import { useState } from "react";
 import {
@@ -19,6 +18,7 @@ import {
 import TimeTable from './components/TimeTable';
 import AdminPage from './components/AdminPage';
 import StudentState from './Reducers/StudentState';
+import AdminState from './Reducers/AdminState';
 
 <link
   rel="stylesheet"
@@ -38,7 +38,9 @@ function App() {
  
   return (
     <>
+    <AdminState>
     <StudentState>
+      
     <HashRouter>
       <Navbar title="NT - Dining Hall" tab1="Home" tab2="Time Table" tab3="Feedback" tab4="Account" />
       <div style={{height: '50px'}}></div>
@@ -54,7 +56,7 @@ function App() {
           <Route exact path="/ttable">
             <TimeTable />
           </Route>
-          <Route exact path="/admin">
+          <Route path="/admin">
             <AdminPage />
           </Route>
           <Route exact path="/stop">
@@ -64,7 +66,7 @@ function App() {
             <RoomService />
           </Route>
 
-          <Route exact path="/account">
+          <Route path="/account">
             <Account />
           </Route>
           <Route exact path="/">
@@ -78,6 +80,7 @@ function App() {
       <Footer />
     </HashRouter>
      </StudentState>
+     </AdminState>
     </>
   );
 }

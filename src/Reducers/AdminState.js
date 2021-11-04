@@ -1,16 +1,16 @@
-import studentContext from "./studentContext";
+import adminContext from "./adminContext";
 import { useState } from 'react'
 
 const StudentState = (props) => {
     const host = "http://localhost:5000";
-    const studentInitial = []
-    const [student, setStudent] = useState(studentInitial)
+    const adminInitial = []
+    const [admin, setAdmin] = useState(adminInitial)
 
     //get all notes
-const getDetailsStudent= async ()=>{
+const getDetailsAdmin= async ()=>{
  
     // api calls
-    const response = await fetch(`${host}/api/auth/getstudent`, {
+    const response = await fetch(`${host}/api/auth/getadmin`, {
       method: 'GET', 
       headers: {
         'Content-Type': 'application/json',
@@ -19,15 +19,14 @@ const getDetailsStudent= async ()=>{
      });
     const json = await response.json()
     //  console.log(json)
-    setStudent(json)
+    setAdmin(json)
   
   }
-
     return (
         <>
-            <studentContext.Provider value={{student, getDetailsStudent}}>
+            <adminContext.Provider value={{admin, getDetailsAdmin}}>
             {props.children}
-            </studentContext.Provider>
+            </adminContext.Provider>
         </>
     )
 }
