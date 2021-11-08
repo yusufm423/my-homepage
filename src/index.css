@@ -3,9 +3,7 @@ body{background-color: #50FFFA;
     background-attachment: fixed;
     background-size: cover;
 }
-[class*="col-"] {
-    width: 100%;
-  }
+
   
   @media only screen and (min-width: 850px) {
     /* For desktop: */

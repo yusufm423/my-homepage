@@ -6,6 +6,7 @@ import Feedback from './components/Feedback';
 import LogIn from './components/LogIn';
 import SignUp from './components/SignUp';
 import Account from './components/Account_page'
+import EditProfile from './components/EditProfile'
 import Stop from './components/Stop'
 import RoomService from './components/RoomService'
 import Alert from "./components/Alert";
@@ -65,6 +66,9 @@ function App() {
           <Route exact path="/roomorder">
             <RoomService />
           </Route>
+          <Route path="/editprofile">
+            <EditProfile/>
+          </Route>
 
           <Route path="/account">
             <Account />
@@ -76,7 +80,6 @@ function App() {
       </div>
       <Feedback></Feedback>
       {/* <Stop></Stop> */}
-
       <Footer />
     </HashRouter>
      </StudentState>

@@ -23,6 +23,7 @@ const getDetailsStudent= async ()=>{
   
   }
 
+   
     return (
         <>
             <studentContext.Provider value={{student, getDetailsStudent}}>
