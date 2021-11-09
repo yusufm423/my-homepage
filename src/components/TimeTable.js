@@ -11,12 +11,18 @@ import { edittimetable } from '../Actions';
 import { ListItem, List } from '@material-ui/core';
 export default function TimeTable() {
     const [edit, changeEdit] = useState(false)
+
+    const isAdmin = localStorage.getItem('isadmin')
+
+    console.log(isAdmin==="true")
     const dispatch = useDispatch()
     useEffect(() => {
 
         return dispatch(gettimetable())
     }, [dispatch])
-    const store = useSelector(state => state?.timetable[0]?.Days)
+    const store = useSelector(state => {
+        console.log(state)
+        return state?.timetable[0]?.Days})
     const [Data, setData] = useState()
     useEffect(() => setData(store), [store])
 
@@ -35,12 +41,16 @@ export default function TimeTable() {
                                         <h5>Time Table</h5>
                                     </Grid>
                                     <Grid item xs={6} md={2}>
-                                        <Button variant="outlined" color="primary" onClick={() => changeEdit(!edit)}>
-                                            Edit
+                                        <Button variant="outlined" color="primary" 
+                                        style={{display:(isAdmin==="true")?"block":"none"}}
+                                        onClick={() => changeEdit(!edit)}>
+                                            Edit{(isAdmin==="true")?"block":"none"}
                                         </Button>
                                     </Grid>
                                     <Grid item xs={6} md={1}>
-                                        <Button variant="outlined" color="primary" onClick={() =>{ 
+                                        <Button variant="outlined" color="primary" 
+                                        style={{display:(isAdmin==="true")?"block":"none"}}
+                                        onClick={() =>{ 
                                             changeEdit(false)
                                             dispatch(edittimetable(Data))
                                         }}>
@@ -122,12 +132,16 @@ export default function TimeTable() {
                                         <h5>Time Table</h5>
                                     </Grid>
                                     <Grid item xs={6} md={2}>
-                                        <Button variant="outlined" color="primary" onClick={() => changeEdit(!edit)}>
-                                            Edit
+                                    <Button variant="outlined" color="primary" 
+                                        style={{display:(isAdmin==="true")?"block":"none"}}
+                                        onClick={() => changeEdit(!edit)}>
+                                            Edit{(isAdmin==="true")?"block":"none"}
                                         </Button>
                                     </Grid>
                                     <Grid item xs={6} md={1}>
-                                        <Button variant="outlined" color="primary" onClick={() => {
+                                        <Button variant="outlined" color="primary" 
+                                        style={{display:(isAdmin==="true")?"block":"none"}}
+                                        onClick={() =>{ 
                                             changeEdit(false)
                                             dispatch(edittimetable(Data))
                                         }}>

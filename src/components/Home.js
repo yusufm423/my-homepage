@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import HomeMid from './HomeMid';
 import Notices from './Notices';
 import Menu from './Menu';
 
-export default function Home() {
+export default function Home({sel,chanSel}) {
+ 
     return (
         <>
            <div className="row">

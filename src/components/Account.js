@@ -29,8 +29,6 @@ export default function AccountPage(props) {
          
         if(localStorage.getItem('token') ){
           getDetailsStudent();
-        }else{
-          history.push("/login")
         }
          // eslint-disable-next-line
 }, [])

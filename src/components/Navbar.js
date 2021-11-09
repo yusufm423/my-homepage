@@ -40,7 +40,8 @@ export default function Navbar(props) {
                     <Link className="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal" to="!#">{props.tab3}</Link>
                     </li>
                     <li className="nav-item mx-1">
-                    {localStorage.getItem('isadmin')!=="true" ? <Link className={`nav-link ${location.pathname==="/account"?"active":""} `} onClick={handleClick} to="/account" >{props.tab4}</Link>: <Link className={`nav-link ${location.pathname==="/admin"?"active":""} `} onClick={handleClick} to="/admin" >{props.tab4}</Link> }
+                    {/* {console.log(localStorage.getItem('token'))} */}
+                    {localStorage.getItem('isadmin')!=="true" ? <Link className={`nav-link ${location.pathname==="/account"?"active":""} `} onClick={handleClick} to="/account?" >{props.tab4}</Link>: <Link className={`nav-link ${location.pathname==="/admin"?"active":""} `} onClick={handleClick} to="/admin" >{props.tab4}</Link> }
                     {/* <Link className={`nav-link ${location.pathname==="/account"?"active":""} `} onClick={handleClick} to="/account" >{props.tab4}</Link> */}
                     </li>
                     </ul> 
