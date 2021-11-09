@@ -9,7 +9,7 @@ import Account from './components/Account_page'
 import Stop from './components/Stop'
 import RoomService from './components/RoomService'
 import Alert from "./components/Alert";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   HashRouter,
   Switch,
@@ -19,13 +19,18 @@ import TimeTable from './components/TimeTable';
 import AdminPage from './components/AdminPage';
 import StudentState from './Reducers/StudentState';
 import AdminState from './Reducers/AdminState';
+import { useDispatch } from 'react-redux';
+import { getnotice } from './Actions';
+import Apple from './components/noticepdf';
 
 <link
   rel="stylesheet"
   href="https://fonts.googleapis.com/icon?family=Material+Icons"
 />
 function App() {
+  const dispatch = useDispatch()
   const [alert, setAlert] = useState(null)
+  useEffect(()=>dispatch(getnotice()),[dispatch])
   const showAlert=(message,type)=>{
     setAlert({
       msg: message,
@@ -71,6 +76,9 @@ function App() {
           </Route>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route exact path="/viewnotices">
+            <Apple />
           </Route>
         </Switch>
       </div>

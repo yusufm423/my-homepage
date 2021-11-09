@@ -3,9 +3,7 @@ body{background-color: #50FFFA;
     background-attachment: fixed;
     background-size: cover;
 }
-[class*="col-"] {
-    width: 100%;
-  }
+
   
   @media only screen and (min-width: 850px) {
     /* For desktop: */
@@ -27,8 +25,9 @@ body{background-color: #50FFFA;
   @media only screen and (max-width: 849px) {
     /* For desktop: */
     [class*="col-"] {
-        width: 100%;
-      }
+      width: 100%;
+    }
+   
       .Homemid2 {display: none;}
       .menu2 {display:none;}
 

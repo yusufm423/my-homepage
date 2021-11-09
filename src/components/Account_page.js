@@ -3,9 +3,11 @@ import Accountpage from './Account'
 
 import Notices from './Notices';
 import Menu from './Menu';
+import { Redirect } from 'react-router';
 
 export default function Account() {
-    return (
+
+    return localStorage.getItem('token')? (
         <>
            <div className="row">
            <div className="col-7 my-3 mb-3 Homemid1"><Accountpage/> </div>
@@ -15,5 +17,5 @@ export default function Account() {
             <div className="col-2 my-3 mb-3 menu2"><Menu/></div>
           </div>  
         </>
-    )
+    ):<Redirect to="/login"/>
 }
