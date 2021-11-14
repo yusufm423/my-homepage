@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 // Import the main component
 import { Viewer } from '@react-pdf-viewer/core'; // install this library
 // Plugins
@@ -16,23 +16,32 @@ import { Button } from '@material-ui/core';
 
 import { useSelector } from 'react-redux';
 
+import { getnotice } from '../Actions';
 
 export const Apple = (props) => {
   const notice = String(window.location.href)
   const index=(notice[notice.length-1])-1
   
+  const dispatch = useDispatch()
+  useEffect(()=>dispatch(getnotice()),[dispatch])
+
   const file = useSelector(state=>state?.notice[index]?.file)
-  
+  console.log(file)
   // Create new plugin instance
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
-  
   // for onchange event
   const [pdfFile, setPdfFile]=useState(file);
   const [pdfFileError, setPdfFileError]=useState('');
+  if(!pdfFile && file)
+  setPdfFile(file)
+
+  console.log(pdfFile)
 
   // for submit event
   const [viewPdf, setViewPdf]=useState(file);
   // onchange event
+  if(!viewPdf && pdfFile)
+  setViewPdf(pdfFile)
   const fileType=['application/pdf'];
   const handlePdfFileChange=(e)=>{
     let selectedFile=e.target.files[0];
@@ -72,7 +81,7 @@ export const Apple = (props) => {
   }
 
   return (
-    <div className='container'>
+    <div className='container' style={{padding:"10px"}}>
 
     <br></br>
     

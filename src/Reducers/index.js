@@ -4,4 +4,12 @@ import timetable from './timeTable';
 
 import notice from './Notices'
 
-export const reducers=combineReducers({timetable,notice})
+import requests from './requests';
+
+import notifications from './notifications';
+
+import Delieveries from './Delieveries';
+
+
+
+export const reducers=combineReducers({Delieveries,requests,timetable,notice,notifications})

@@ -1,7 +1,9 @@
 import React, {  useEffect,useContext, useState } from 'react'
 import { useHistory } from "react-router";
 import studentContext from '../Reducers/studentContext';
-
+import io from "socket.io-client"
+import { useDispatch } from 'react-redux';
+let socket
 export default function RoomService() {
     const context = useContext(studentContext);
   const { student, getDetailsStudent } = context;
@@ -16,9 +18,15 @@ export default function RoomService() {
       }, [])
    
     let history = useHistory()
-
+const dispatch = useDispatch()
 const [credentials, setCredentials] = useState({name:student.name, email: student.email, room_no: student.room_no, reason:"",mealno:""})
+useEffect(()=>{
+  socket = io('localhost:5000')
+  if(localStorage.getItem('token')){
+  socket.emit('addUser',student.email)}
+},['localhost:5000'])
 
+useEffect(()=>socket.on('recieve',(data)=>dispatch({type:'editNotifications',payload:data}),[]))
 const handleSubmit =async (e)=>{
     
     e.preventDefault()
@@ -31,28 +39,17 @@ const handleSubmit =async (e)=>{
     }else if(mealno==="3"){
         meal="Dinner"
     }
+    socket.emit('sendMessage',{user:"admin1@gmail.com",
+    info:{RoomOrder:true,room_no:room_no,name:student.name,reason:reason},
+    sender:student.email,meal:meal})
     
-    console.log(credentials, meal, student.name)
-    const response = await fetch("http://localhost:5000/api/req/reqorder", {
-        method: 'POST', 
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({name, email, room_no, reason,meal}) 
-      });
-      const json = await response.json()
-      console.log(json)
-      if(json.success){
+     
         //save the auth token
         // localStorage.setItem('token', json.authToken)
         history.push("./account")
         // console.log("Account Created Successfully")
         // props.showAlert("Request Sent", "success")
 
-      }else{
-        // console.log("Invalid Credentials")
-        //   props.showAlert("Invalid Credentials", "danger")
-      }
 
 
     }

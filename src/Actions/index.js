@@ -1,4 +1,4 @@
-import { getTimetable,editTimetable, editNotices,getNotices } from "../api"
+import { getrequests,getTimetable,editTimetable, editNotices,getNotices } from "../api"
 export const gettimetable = () => async (dispatch) => {
     try {
         const { data } = await getTimetable()
@@ -36,6 +36,19 @@ export const getnotice = (heading,file) => async (dispatch) => {
         const { data } = await getNotices()
         // console.log(data)
         dispatch({ type: 'getNotice', payload: data })
+    }
+    catch (error) {
+        console.log(error.message)
+    }
+}
+
+export const getreq = () => async (dispatch) => {
+    try {
+        // console.log("reached")
+        const { data } = await getrequests()
+        // console.log(data)
+        dispatch({ type: 'getReq', payload: data.requests })
+        dispatch({type:'getDel',payload:data.delieveries})
     }
     catch (error) {
         console.log(error.message)
