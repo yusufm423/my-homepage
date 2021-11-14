@@ -23,15 +23,20 @@ import AdminState from './Reducers/AdminState';
 import { useDispatch } from 'react-redux';
 import { getnotice } from './Actions';
 import Apple from './components/noticepdf';
+import io from "socket.io-client"
 
 <link
   rel="stylesheet"
   href="https://fonts.googleapis.com/icon?family=Material+Icons"
 />
+let socket
 function App() {
   const dispatch = useDispatch()
+  const token = localStorage.getItem('token')
   const [alert, setAlert] = useState(null)
+  const [notifications,setNotifications] = useState(null)
   useEffect(()=>dispatch(getnotice()),[dispatch])
+  
   const showAlert=(message,type)=>{
     setAlert({
       msg: message,
@@ -69,14 +74,14 @@ function App() {
             <Stop />
           </Route>
           <Route exact path="/roomorder">
-            <RoomService />
+            <RoomService setNotifications={setNotifications}/>
           </Route>
           <Route path="/editprofile">
             <EditProfile/>
           </Route>
 
           <Route path="/account">
-            <Account />
+            <Account setNotifications={setNotifications}/>
           </Route>
           <Route exact path="/">
             <Home />

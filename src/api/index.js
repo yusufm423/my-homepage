@@ -9,3 +9,5 @@ export const editTimetable =(newtime)=> axios.post(`${url}timetable/edit`,newtim
 export const editNotices = (heading,file) =>axios.post(`${url}notices/edit`,{heading,file})
 
 export const getNotices = () =>axios.get(`${url}notices/get`)
+
+export const getrequests = () => axios.get(`${url}api/req/reqorder/get`)
