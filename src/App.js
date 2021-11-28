@@ -24,6 +24,7 @@ import { useDispatch } from 'react-redux';
 import { getnotice } from './Actions';
 import Apple from './components/noticepdf';
 import io from "socket.io-client"
+import Accountofstudents from './components/Accountofstudents';
 
 <link
   rel="stylesheet"
@@ -82,6 +83,9 @@ function App() {
 
           <Route path="/account">
             <Account setNotifications={setNotifications}/>
+          </Route>
+          <Route path="/table">
+            <Accountofstudents/>
           </Route>
           <Route exact path="/">
             <Home />

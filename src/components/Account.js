@@ -97,8 +97,8 @@ export default function AccountPage(props) {
           <MenuList>
             <MenuItem><AccountBalanceWalletIcon style={{ marginRight: "2vw" }} /><Typography variant="h6">Account</Typography></MenuItem>
             <MenuItem><PaymentIcon style={{ marginRight: "2vw" }} /><Typography variant="h6">Payment</Typography></MenuItem>
-            <MenuItem><RoomServiceIcon style={{ marginRight: "2vw" }} /><Link to="/roomorder" style={{ textDecoration: "none", color: "inherit" }}><Typography variant="h6">Room Service</Typography></Link></MenuItem>
-            <MenuItem><ToggleOnIcon style={{ marginRight: "2vw" }} /><Link to="/stop" style={{ textDecoration: "none", color: "inherit" }}><Typography variant="h6">Close Dining Account</Typography></Link></MenuItem>
+            <Link to="/roomorder" style={{ textDecoration: "none", color: "inherit" }}><MenuItem><RoomServiceIcon style={{ marginRight: "2vw" }} /><Typography variant="h6">Room Service</Typography></MenuItem></Link>
+            <Link to="/stop" style={{ textDecoration: "none", color: "inherit" }}><MenuItem><ToggleOnIcon style={{ marginRight: "2vw" }} /><Typography variant="h6">Close Dining Account</Typography></MenuItem></Link>
             <MenuItem onClick={()=>setNote(!Note)}><NotificationsIcon  style={{marginRight:"2vw"}}/><Typography variant="h6">Notifications</Typography></MenuItem>
             <Collapse in={Note}>
                                     <div

@@ -1,6 +1,7 @@
 import { React, useState, useEffect, useContext } from 'react'
 import adminContext from '../Reducers/adminContext';
 import { useHistory } from "react-router";
+import { Link } from 'react-router-dom'
 import Notices from './Notices';
 import Collapse from '@material-ui/core/Collapse';
 import { Avatar } from '@material-ui/core';
@@ -101,7 +102,7 @@ export default function AdminPage() {
                                     <Typography variant="body1">{admin.phone_no}</Typography>
                                 </div>
                                 <div>
-                                    <Button variant="outlined" color="primary" style={{ marginTop: "2vh" }}>Edit Profile</Button>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -149,10 +150,10 @@ export default function AdminPage() {
                                 <Typography variant="h5">Facilities</Typography>
                             </div>
                             <MenuList>
-                                <MenuItem>
+                            <Link to="/table" style={{ textDecoration: "none", color: "inherit" }}><MenuItem>
                                     <AccountBalanceWalletIcon style={{ marginRight: "2vw" }} />
                                     <Typography variant="h6">Accounts of Students</Typography>
-                                </MenuItem>
+                                </MenuItem></Link>
                                 <MenuItem onClick={() => changeDel(!showDel)}>
                                     <ToggleOnIcon style={{ marginRight: "2vw" }} />
                                     <Typography variant="h6">Requests</Typography>
@@ -216,13 +217,19 @@ export default function AdminPage() {
                                                         </Grid>
                                                         <Grid item xs={6} md={2}>
                                                             <Button variant="outlined" color="secondary"
-                                                                onClick={() => socket.emit('sendMessage',
-                                                                    { room_no: room.room_no,
-                                                                     user: room.email,
-                                                                    Accepted: false, 
-                                                                    sender: "admin1@gmail.com", 
-                                                                    meal: room.meal, 
-                                                                    id: room._id })}
+                                                                onClick={() => {
+                                                                    setReqs(reqs.filter((req) => req._id !== room._id))
+                                                                    
+                                                                    socket.emit('sendMessage',
+                                                                        {
+                                                                            room_no: room.room_no,
+                                                                            user: room.email,
+                                                                            Accepted: false,
+                                                                            sender: "admin1@gmail.com",
+                                                                            meal: room.meal,
+                                                                            id: room._id
+                                                                        })
+                                                                }}
                                                             >
                                                                 Deny
                                                             </Button>
