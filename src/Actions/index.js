@@ -19,11 +19,12 @@ export const edittimetable = (newtime) => async (dispatch) => {
         console.log(error.message)
     }
 }
-export const editnotice = (heading,file) => async (dispatch) => {
+export const editnotice = (heading,file,setMsg) => async (dispatch) => {
     try {
-        console.log("reached")
+        // console.log("reached")
         const { data } = await editNotices(heading,file)
         console.log("jaa")
+        setMsg("Uploaded")
         dispatch({ type: 'editNotice', payload: data })
     }
     catch (error) {
@@ -49,6 +50,7 @@ export const getreq = () => async (dispatch) => {
         // console.log(data)
         dispatch({ type: 'getReq', payload: data.requests })
         dispatch({type:'getDel',payload:data.delieveries})
+        dispatch({type:'getClose',payload:data.reqClose})
     }
     catch (error) {
         console.log(error.message)
