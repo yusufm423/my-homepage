@@ -16,10 +16,10 @@ import { Button } from '@material-ui/core';
 
 
 export const App = (props) => {
-  console.log(props)
+  // console.log(props)
   const heading=props.props
   
-  console.log(heading)
+  // console.log(heading)
   // Create new plugin instance
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
   
@@ -68,7 +68,7 @@ export const App = (props) => {
       setViewPdf(null);
     }
   }
-
+  const [msg,setMsg] = useState(null)
   return (
     <div className='container'>
 
@@ -90,13 +90,16 @@ export const App = (props) => {
         {
         pdfFile?<Button variant="outlined" color="primary"
         style={{margin:"10px"}}
-        onClick={()=>dispatch(editnotice(heading,pdfFile))}>Upload</Button>:<></>
+        onClick={()=>{
+          setMsg("Uploading...")
+          dispatch(editnotice(heading,pdfFile,setMsg))}}>Upload</Button>:<></>
       }
+      {msg?msg:""}
       </div>
       </form>
       <br></br>
       <h4>Preview PDF</h4>
-      <div className='pdf-container'>
+      <div className='pdf-container' style={{height:viewPdf?"80vh":"5vh"}}>
         {/* show pdf conditionally (if we have one)  */}
         {viewPdf&&<><Worker workerUrl="https://unpkg.com/pdfjs-dist@2.6.347/build/pdf.worker.min.js">
           <Viewer fileUrl={viewPdf}

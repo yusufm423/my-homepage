@@ -17,6 +17,7 @@ import { Button } from '@material-ui/core';
 import { useSelector } from 'react-redux';
 
 import { getnotice } from '../Actions';
+import { relativeTimeRounding } from 'moment';
 
 export const Apple = (props) => {
   const notice = String(window.location.href)
@@ -26,7 +27,7 @@ export const Apple = (props) => {
   useEffect(()=>dispatch(getnotice()),[dispatch])
 
   const file = useSelector(state=>state?.notice[index]?.file)
-  console.log(file)
+  // console.log(file)
   // Create new plugin instance
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
   // for onchange event
@@ -86,7 +87,7 @@ export const Apple = (props) => {
     <br></br>
     
       
-      <div className='pdf-container'>
+      <div className='pdf-container' style={{height:"100vh",width:"80vw"}}>
         {/* show pdf conditionally (if we have one)  */}
         {viewPdf&&<><Worker workerUrl="https://unpkg.com/pdfjs-dist@2.6.347/build/pdf.worker.min.js">
           <Viewer fileUrl={viewPdf}
