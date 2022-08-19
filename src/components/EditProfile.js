@@ -49,7 +49,7 @@ export default function Stop(props) {
 
     // console.log(id)
     const response = await fetch(
-      `http://localhost:5000/api/auth/updateprofile/${student._id}`,
+      `https://dininghall.herokuapp.com/api/auth/updateprofile/${student._id}`,
       {
         method: "PUT",
         headers: {

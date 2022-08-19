@@ -8,7 +8,7 @@ export default function SignUp(props) {
     const handleSubmit =async (e)=>{
         e.preventDefault()
         const {name, enrollment_no, faculty_no, email, password} = credentials
-        const response = await fetch("http://localhost:5000/api/auth/signupstudent", {
+        const response = await fetch("https://dininghall.herokuapp.com/api/auth/signupstudent", {
             method: 'POST', 
             headers: {
               'Content-Type': 'application/json',

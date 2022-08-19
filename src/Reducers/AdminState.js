@@ -2,7 +2,7 @@ import adminContext from "./adminContext";
 import { useState } from 'react'
 
 const StudentState = (props) => {
-    const host = "http://localhost:5000";
+    const host = "https://dininghall.herokuapp.com/";
     const adminInitial = []
     const [admin, setAdmin] = useState(adminInitial)
 

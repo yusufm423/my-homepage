@@ -12,7 +12,7 @@ export default function Feedback() {
         let {name, email, room_no, message} = msg
         
         // console.log(id)
-        const response = await fetch('http://localhost:5000/api/req/feedback', {
+        const response = await fetch('https://dininghall.herokuapp.com/api/req/feedback', {
             method: 'POST', 
             headers: {
               'Content-Type': 'application/json',

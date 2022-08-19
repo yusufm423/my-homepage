@@ -21,7 +21,7 @@ export default function RoomService() {
 const dispatch = useDispatch()
 const [credentials, setCredentials] = useState({name:student.name, email: student.email, room_no: student.room_no, reason:"",mealno:""})
 useEffect(()=>{
-  socket = io('localhost:5000')
+  socket = io('https://dininghall.herokuapp.com/')
   if(localStorage.getItem('token')){
   socket.emit('addUser',student.email)}
 },['localhost:5000'])

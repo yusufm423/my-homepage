@@ -67,11 +67,11 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yusufm423/my-homepage.git"
+    "url": "git+https://github.com/navedkhan76/diningHall.git"
   },
   "author": "naved",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yusufm423/my-homepage/issues"
+    "url": "https://github.com/navedkhan76/diningHall/issues"
   }
 }

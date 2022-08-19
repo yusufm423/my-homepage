@@ -24,7 +24,7 @@ const handleSubmit =async (e)=>{
     let {name, email, room_no, reason} = credentials
     
     console.log(credentials, student.name)
-    const response = await fetch("http://localhost:5000/api/req/reqclose", {
+    const response = await fetch("https://dininghall.herokuapp.com/api/req/reqclose", {
         method: 'POST', 
         headers: {
           'Content-Type': 'application/json',

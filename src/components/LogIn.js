@@ -13,7 +13,7 @@ export default function LogIn(props) {
         }else{
              user = "admin"
         }
-        const response = await fetch(`http://localhost:5000/api/auth/login${user}`, {
+        const response = await fetch(`https://dininghall.herokuapp.com/api/auth/login${user}`, {
             method: 'POST', 
             headers: {
               'Content-Type': 'application/json',

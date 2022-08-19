@@ -52,7 +52,7 @@ export default function AdminPage() {
 //   console.log(close);
   useEffect(() => {
     dispatch(getreq());
-    socket = io("localhost:5000");
+    socket = io("https://dininghall.herokuapp.com/");
     if (localStorage.getItem("token")) {
       socket.emit("addUser", "admin1@gmail.com");
     }

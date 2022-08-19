@@ -31,7 +31,7 @@ export default function AccountPage(props) {
   const dispatch = useDispatch();
   const context = useContext(studentContext);
   useEffect(() => {
-    socket = io("localhost:5000");
+    socket = io("https://dininghall.herokuapp.com/");
     if (localStorage.getItem("token") && context?.student?.email) {
       socket.emit("addUser", `${context?.student?.email}re`);
     }
@@ -90,7 +90,7 @@ export default function AccountPage(props) {
 
   const handle = async (token, addresses) => {
     // console.log(token);
-    const response = await axios.post("http://localhost:5000/checkout", {
+    const response = await axios.post("https://dininghall.herokuapp.com/checkout", {
       token,
       price: 1500,
     });

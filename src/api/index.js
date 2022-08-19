@@ -1,6 +1,6 @@
 import axios from'axios'
 
-const url='http://localhost:5000/'
+const url='https://dininghall.herokuapp.com/'
 
 export const getTimetable = ()=> axios.get(`${url}timetable/getTime`)
 
