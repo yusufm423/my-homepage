@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/my-homepage/static/css/main.50f673a8.chunk.css",
-    "main.js": "/my-homepage/static/js/main.785d593c.chunk.js",
-    "main.js.map": "/my-homepage/static/js/main.785d593c.chunk.js.map",
-    "runtime-main.js": "/my-homepage/static/js/runtime-main.9f21010f.js",
-    "runtime-main.js.map": "/my-homepage/static/js/runtime-main.9f21010f.js.map",
-    "static/css/2.f8cd9be9.chunk.css": "/my-homepage/static/css/2.f8cd9be9.chunk.css",
-    "static/js/2.5ec81ce2.chunk.js": "/my-homepage/static/js/2.5ec81ce2.chunk.js",
-    "static/js/2.5ec81ce2.chunk.js.map": "/my-homepage/static/js/2.5ec81ce2.chunk.js.map",
-    "static/js/3.2219b59a.chunk.js": "/my-homepage/static/js/3.2219b59a.chunk.js",
-    "static/js/3.2219b59a.chunk.js.map": "/my-homepage/static/js/3.2219b59a.chunk.js.map",
-    "index.html": "/my-homepage/index.html",
-    "static/css/2.f8cd9be9.chunk.css.map": "/my-homepage/static/css/2.f8cd9be9.chunk.css.map",
-    "static/css/main.50f673a8.chunk.css.map": "/my-homepage/static/css/main.50f673a8.chunk.css.map",
-    "static/js/2.5ec81ce2.chunk.js.LICENSE.txt": "/my-homepage/static/js/2.5ec81ce2.chunk.js.LICENSE.txt",
-    "static/media/NT.27bda677.jpeg": "/my-homepage/static/media/NT.27bda677.jpeg"
+    "main.css": "/dining-hall-management/static/css/main.50f673a8.chunk.css",
+    "main.js": "/dining-hall-management/static/js/main.e78d644f.chunk.js",
+    "main.js.map": "/dining-hall-management/static/js/main.e78d644f.chunk.js.map",
+    "runtime-main.js": "/dining-hall-management/static/js/runtime-main.013c6bbf.js",
+    "runtime-main.js.map": "/dining-hall-management/static/js/runtime-main.013c6bbf.js.map",
+    "static/css/2.f8cd9be9.chunk.css": "/dining-hall-management/static/css/2.f8cd9be9.chunk.css",
+    "static/js/2.607bc82d.chunk.js": "/dining-hall-management/static/js/2.607bc82d.chunk.js",
+    "static/js/2.607bc82d.chunk.js.map": "/dining-hall-management/static/js/2.607bc82d.chunk.js.map",
+    "static/js/3.1940974b.chunk.js": "/dining-hall-management/static/js/3.1940974b.chunk.js",
+    "static/js/3.1940974b.chunk.js.map": "/dining-hall-management/static/js/3.1940974b.chunk.js.map",
+    "index.html": "/dining-hall-management/index.html",
+    "static/css/2.f8cd9be9.chunk.css.map": "/dining-hall-management/static/css/2.f8cd9be9.chunk.css.map",
+    "static/css/main.50f673a8.chunk.css.map": "/dining-hall-management/static/css/main.50f673a8.chunk.css.map",
+    "static/js/2.607bc82d.chunk.js.LICENSE.txt": "/dining-hall-management/static/js/2.607bc82d.chunk.js.LICENSE.txt",
+    "static/media/NT.27bda677.jpeg": "/dining-hall-management/static/media/NT.27bda677.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.9f21010f.js",
+    "static/js/runtime-main.013c6bbf.js",
     "static/css/2.f8cd9be9.chunk.css",
-    "static/js/2.5ec81ce2.chunk.js",
+    "static/js/2.607bc82d.chunk.js",
     "static/css/main.50f673a8.chunk.css",
-    "static/js/main.785d593c.chunk.js"
+    "static/js/main.e78d644f.chunk.js"
   ]
 }
